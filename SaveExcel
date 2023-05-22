@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.DataFrame([
+    ['Romio', '1990.01.02', '2021-0001'],
+    ['James', '1990.05.06', '2021-0002'],
+    ['Robert', '2000.08.08', '2021-0003'],
+    ['Jane', '2000.09.09', '2021-0004'],
+    ['Samuel', '2010.10.10', '2021-0005'],
+    ['Kate', '2017.12.12', '2021-0006']
+])
+
+print(df)
+df.to_excel('students_list.xlsx', index=False, header=False)
