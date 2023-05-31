@@ -1,0 +1,7 @@
+a,b,c = input('Input integer: ').split()
+a = int(a)
+b = int(b)
+c = int(c)
+print(type(a))
+print(type(b))
+print(type(c))
