@@ -1,6 +1,7 @@
+import ssl
 import pandas as pd
-
-df = pd.read_csv('./docs/perch_full.csv')
+ssl._create_default_https_context = ssl._create_unverified_context
+df = pd.read_csv('https://bit.ly/perch_csv_data')
 perch_full = df.to_numpy()
 # print(perch_full)
 
