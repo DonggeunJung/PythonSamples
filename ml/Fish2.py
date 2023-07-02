@@ -1,5 +1,7 @@
+import ssl
 import pandas as pd
-fish = pd.read_csv('./docs/fish.csv')
+ssl._create_default_https_context = ssl._create_unverified_context
+fish = pd.read_csv('https://bit.ly/fish_csv_data')
 fish_input = fish[['Weight', 'Length', 'Diagonal', 'Height', 'Width']].to_numpy()
 fish_target = fish['Species'].to_numpy()
 
